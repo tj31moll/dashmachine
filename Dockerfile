@@ -2,10 +2,7 @@ ARG BUILD_FROM
 FROM $BUILD_FROM
 FROM python:3.8-slim
 
-# Install requirements for add-on
-RUN \
-  apk add --no-cache \
-    example_alpine_package
+
 
 # Copy data for add-on
 COPY run.sh /
