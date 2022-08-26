@@ -14,6 +14,6 @@ RUN pip install --no-cache-dir --progress-bar off -r requirements.txt
 COPY [ ".", "/dashmachine/" ]
 
 ENV PRODUCTION=true
-EXPOSE 5000
+EXPOSE 5666
 VOLUME /dashmachine/dashmachine/user_data
-CMD [ "gunicorn", "--bind", "0.0.0.0:5000", "wsgi:app" ]
+CMD [ "gunicorn", "--bind", "0.0.0.0:5666", "wsgi:app" ]
